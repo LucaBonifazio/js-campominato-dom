@@ -42,21 +42,7 @@ for (let i = 1; i <= 16; i++) {
         randomNumberMine = getRandomInteger(1, 100); 
     } while (arrRandoms.includes(randomNumberMine))
     arrRandoms.push(randomNumberMine);
-
-    // const eleCell = document.createElement('div');
-    // eleCell.classList.add('cell');
-    // if (isMine(randomNumberMine)) {
-    //     eleCell.classList.add('mine');
-    // } else {
-    //     eleCell.classList.add('safe');
-    // }
-    // eleCell.innerHTML = randomNumberMine;
-    // eleGrid.append(eleCell);
-
-    // eleCell.addEventListener('click', toggleCell);
 }
-
-
 
 console.log(arrRandoms);
 
@@ -68,10 +54,10 @@ function getRandomInteger(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-function isMine(number) {
-	if (number % 2) {
-		return false;
-	} else {
-		return true;
-	}
-}
+// function isMine(number) {
+// 	if (number % 2) {
+// 		return false;
+// 	} else {
+// 		return true;
+// 	}
+// }
