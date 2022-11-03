@@ -79,6 +79,10 @@ body{
 	background-color: rgb(46, 247, 6);
 }
 
+.cell.active.mine {
+	background-color: rgb(247, 22, 6);
+}
+
 label{
     font-size: large;
     padding: .5rem;

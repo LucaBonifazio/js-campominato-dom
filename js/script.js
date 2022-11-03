@@ -14,6 +14,7 @@ const eleGrid = document.querySelector('.grid');
 const eleWelcomeText = document.querySelector('.welcome-text')
 const eleMode = document.querySelector('#mode');
 const eleBtn = document.querySelector('.btn');
+const arrRandoms = [];
 
 eleBtn.addEventListener('click', function () {
     
@@ -35,6 +36,42 @@ eleBtn.addEventListener('click', function () {
     }
 });
 
+for (let i = 1; i <= 16; i++) {
+    let randomNumberMine;
+    do {
+        randomNumberMine = getRandomInteger(1, 100); 
+    } while (arrRandoms.includes(randomNumberMine))
+    arrRandoms.push(randomNumberMine);
+
+    // const eleCell = document.createElement('div');
+    // eleCell.classList.add('cell');
+    // if (isMine(randomNumberMine)) {
+    //     eleCell.classList.add('mine');
+    // } else {
+    //     eleCell.classList.add('safe');
+    // }
+    // eleCell.innerHTML = randomNumberMine;
+    // eleGrid.append(eleCell);
+
+    // eleCell.addEventListener('click', toggleCell);
+}
+
+
+
+console.log(arrRandoms);
+
 function toggleCell() {
 	this.classList.toggle('active');
+}
+
+function getRandomInteger(min, max) {
+	return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+function isMine(number) {
+	if (number % 2) {
+		return false;
+	} else {
+		return true;
+	}
 }
