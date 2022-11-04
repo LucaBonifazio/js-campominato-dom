@@ -76,11 +76,11 @@ body{
     cursor: pointer;
 }
 
-.cell.active {
+.cell.no-mine {
 	background-color: rgb(46, 247, 6);
 }
 
-.cell.active.mine {
+.cell.mine {
 	background-color: rgb(247, 22, 6);
 }
 
