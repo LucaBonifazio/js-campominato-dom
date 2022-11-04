@@ -55,6 +55,13 @@ body{
     margin: auto;
 }
 
+.result-text{
+    position: absolute;
+    bottom: 70px;
+    left: auto;
+    right: auto;
+}
+
 .grid {
     --sideSquare: 10;
 	display: flex;

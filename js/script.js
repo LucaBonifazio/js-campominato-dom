@@ -1,5 +1,6 @@
 const eleGrid = document.querySelector('.grid');
-const eleWelcomeText = document.querySelector('.welcome-text')
+const eleWelcomeText = document.querySelector('.welcome-text');
+const eleResultText = document.querySelector('.result-text');
 const eleMode = document.querySelector('#mode');
 const eleBtn = document.querySelector('.btn');
 let arrMines;
@@ -36,14 +37,14 @@ function toggleCell() {
 	if (arrMines.includes(cellNumber)) { 
 		this.classList.add('mine');
 		disableAllCells(true);
-		alert('Il tuo punteggio e: ' + score);
+		eleResultText.innerHTML = ('Il tuo punteggio è : ' + score);
 	} else {
 		this.removeEventListener('click', toggleCell); 
 		score++;
 		this.classList.add('no-mine');
 		if (score == maxScore) {
 			disableAllCells(false);
-			alert('Complimenti hai vinto! Il tuo punteggio e: ' + score);
+			eleResultText.innerHTML = ('Complimenti hai vinto! Il tuo punteggio è : ' + score);
 		}
 	}
 }
